@@ -156,8 +156,7 @@ namespace ETicaretAPI.API.Controllers
             //}
             //return  Ok();
 
-            //28ders
-
+            //28ders -- deneme
 
 
         }
