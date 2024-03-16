@@ -857,6 +857,7 @@
       },
       "ETicaretAPI.Infrastructure/1.0.0": {
         "dependencies": {
+          "ETicaretAPI.Application": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },
