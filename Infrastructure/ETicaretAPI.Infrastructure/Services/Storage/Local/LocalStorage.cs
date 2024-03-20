@@ -1,6 +1,10 @@
 ﻿using ETicaretAPI.Application.Abstractions.Storage.Local;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using ETicaretAPI.Application.Abstractions.Storage.Azure;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ETicaretAPI.Infrastructure.Services.Storage.Local
 {
-    public class LocalStorage : ILocalStorage
+    public class LocalStorage : Storage, ILocalStorage
     {
         readonly IWebHostEnvironment _webHostEnvironment;
         public LocalStorage(IWebHostEnvironment webHostEnvironment)
@@ -38,9 +42,10 @@ namespace ETicaretAPI.Infrastructure.Services.Storage.Local
             List<(string fileName, string path)> datas = new();
             foreach (IFormFile file in files)
             {
+                string fileNewName = await FileRenameAsync(path, file.Name);
 
-                await CopyFileAsync($"{uploadPath}\\{file.Name}", file);
-                datas.Add((file.Name, $"{path}\\{file.Name}"));
+                await CopyFileAsync($"{uploadPath}\\{fileNewName}", file);
+                datas.Add((fileNewName, $"{path}\\{fileNewName}"));
             }
             return datas;
 
