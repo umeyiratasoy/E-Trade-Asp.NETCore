@@ -19,18 +19,18 @@ namespace ETicaretAPI.Infrastructure.Services
         }
 
 
-        async Task<string> FileRenameAsync(string path, string fileName)
-        {
-            string extension = Path.GetExtension(fileName);
-            string oldName = Path.GetFileNameWithoutExtension(fileName);
-            Regex regex = new Regex("[*'\",+-._&#^@|/<>~]");
-            string newFileName = regex.Replace(oldName, string.Empty);
-            DateTime datetimenow = DateTime.UtcNow;
-            string datetimeutcnow = datetimenow.ToString("yyyyMMddHHmmss");
-            string fullName = NameOperation.CharacterRegulatory(newFileName)+$"{datetimeutcnow}-{extension}";
+        //async Task<string> FileRenameAsync(string path, string fileName)
+        //{
+        //    string extension = Path.GetExtension(fileName);
+        //    string oldName = Path.GetFileNameWithoutExtension(fileName);
+        //    Regex regex = new Regex("[*'\",+-._&#^@|/<>~]");
+        //    string newFileName = regex.Replace(oldName, string.Empty);
+        //    DateTime datetimenow = DateTime.UtcNow;
+        //    string datetimeutcnow = datetimenow.ToString("yyyyMMddHHmmss");
+        //    string fullName = NameOperation.CharacterRegulatory(newFileName)+$"{datetimeutcnow}-{extension}";
 
-            return fullName;
-        }
+        //    return fullName;
+        //}
 
 
         //public async Task<List<(string fileName, string path)>> UploadAsync(string path, IFormFileCollection files)
