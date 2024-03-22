@@ -20,8 +20,4 @@
     <ProjectReference Include="..\..\Infrastructure\ETicaretAPI.Persistence\ETicaretAPI.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\resource\" />
-  </ItemGroup>
-
 </Project>
