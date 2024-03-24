@@ -29,8 +29,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "ETicaretAPI.Application.ViewModels.Products.VM_Create_Product",
+        "Name": "createProductCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.CreateProduct.CreateProductCommandRequest",
         "IsRequired": true
       }
     ],
