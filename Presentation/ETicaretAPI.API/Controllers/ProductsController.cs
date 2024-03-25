@@ -11,8 +11,14 @@ using ETicaretAPI.Application.Abstractions.Storage;
 using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
-using ETicaretAPI.Application.Features.Queries.GetAllProduct;
-using ETicaretAPI.Application.Features.Commands.CreateProduct;
+using ETicaretAPI.Application.Features.Commands.Product.CreateProduct;
+using ETicaretAPI.Application.Features.Queries.Product.GetAllProduct;
+using ETicaretAPI.Application.Features.Queries.Product.GetByIdProduct;
+using ETicaretAPI.Application.Features.Commands.Product.UpdateProduct;
+using ETicaretAPI.Application.Features.Commands.Product.RemoveProduct;
+using ETicaretAPI.Application.Features.Commands.ProductImageFile.UploadProductImage;
+using ETicaretAPI.Application.Features.Commands.ProductImageFile.RemoveProductImage;
+using ETicaretAPI.Application.Features.Queries.ProductImageFile.GetProductImages;
 
 namespace ETicaretAPI.API.Controllers
 {
@@ -105,10 +111,11 @@ namespace ETicaretAPI.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult> Get(string id)
+        [HttpGet("{Id}")]
+        public async Task<ActionResult> Get([FromRoute]GetByIdProductQueryRequest getByIdProductQueryRequest)
         {
-            return Ok(await _productReadRepository.GetByIdAsync(id, false));
+            GetByIdProductQueryResponse response = await _mediator.Send(getByIdProductQueryRequest);
+            return Ok(response);
         }
 
         [HttpPost]
@@ -119,127 +126,46 @@ namespace ETicaretAPI.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put(VM_Update_Product model)
+        public async Task<ActionResult> Put([FromBody]UpdateProductCommandRequest updateProductCommandRequest)
         {
-            Product product = await _productReadRepository.GetByIdAsync(model.Id);
-            product.Price = model.Price;
-            product.Stock = model.Stock;
-            product.Name = model.Name;
-            await _productWriteRepository.SaveAsync();
 
-            return Ok();
-
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(string id)
-        {
-            await _productWriteRepository.RemoveAsync(id);
-            await _productWriteRepository.SaveAsync();
+            UpdateProductCommandResponse response = await _mediator.Send(updateProductCommandRequest);
             return Ok();
         }
+
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult> Delete([FromRoute] RemoveProductCommandRequest removeProductCommandRequest)
+        {
+            RemoveProductCommandResponse response =  await _mediator.Send(removeProductCommandRequest);
+            return Ok();
+        }
+
+
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Upload(string id)
+        public async Task<IActionResult> Upload([FromQuery] UploadProductImageCR uploadProductImageCommandRequest)
         {
-
-            //foreach (var r in result) 
-            //{
-            //    product.ProductImageFiles.Add(new()
-            //    {
-            //        FileName = r.fileName,
-            //        Path = r.pathOrContainerName,
-            //        Storage = _storageService.StorageName,
-            //        Products = new List<Product>() { product }
-            //    });
-            //}
-
-            //var datas = await _storageService.UploadAsync("files", Request.Form.Files);
-            //await _productImageFileWriteRepository.AddRangeAsync(datas.Select(d => new ProductImageFile()
-            //{
-            //    FileName = d.fileName,
-            //    Path = d.pathOrContainerName,
-            //    Storage = _storageService.StorageName
-            //}).ToList());
-            //await _productImageFileWriteRepository.SaveAsync();
-            //return  Ok();
-
-            //var datas = await _fileService.UploadAsync("resource/invoices", Request.Form.Files);
-            //await _invoiceFileWriteRepository.AddRangeAsync(datas.Select(d => new InvoiceFile()
-            //{
-            //    FileName = d.fileName,
-            //    Path = d.path,
-            //    Price = new Random().Next()
-            //}).ToList()); ;
-
-            //var datas = await _fileService.UploadAsync("resource/files", Request.Form.Files);
-            //await _fileWriteRepository.AddRangeAsync(datas.Select(d => new F.File()
-            //{
-            //    FileName = d.fileName,
-            //    Path = d.path,
-            //}).ToList()); ;
-            //await _fileWriteRepository.SaveAsync();
-            //return Ok();
-
-
-
-            //string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath,"resource/product-images");
-
-            //if(!Directory.Exists(uploadPath))
-            //   Directory.CreateDirectory(uploadPath);
-
-            //Random  r = new Random();
-            //foreach (IFormFile file in Request.Form.Files)
-            //{   
-            //    string fullPath = Path.Combine(uploadPath,$"{r.Next()}{Path.GetExtension(file.FileName)}");
-            //    using FileStream fileStream = new(fullPath,FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
-            //    await file.CopyToAsync(fileStream);
-            //    await fileStream.FlushAsync();
-            //}
-
-
-            List<(string fileName, string pathOrContainerName)> result = await _storageService.UploadAsync("photo-images", Request.Form.Files);
-
-            Product product = await _productReadRepository.GetByIdAsync(id);
-
-            await _productImageFileWriteRepository.AddRangeAsync(result.Select(r => new ProductImageFile
-            {
-                FileName = r.fileName,
-                Path = r.pathOrContainerName,
-                Storage = _storageService.StorageName,
-                Products = new List<Product>() { product }
-            }).ToList());
-            await _productImageFileWriteRepository.SaveAsync();
-
+            uploadProductImageCommandRequest.Files = Request.Form.Files;
+            UploadProductImageCRP response = await _mediator.Send(uploadProductImageCommandRequest);
             return Ok();
-
         }
 
 
 
         [HttpGet("[action]/{id}")]
-        public async Task<ActionResult> GetProductImages(string id)
+        public async Task<ActionResult> GetProductImages([FromRoute]GetProductImagesQR getProductImagesQR)
         {
-            Product? product = await _productReadRepository.Table.Include( p => p.ProductImageFiles).FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
-            return Ok(product.ProductImageFiles.Select(p => new{
-                Path = $"{_configuration["BaseStorageUrl"]}/{p.Path}",
-                p.FileName,
-                p.Id
-            }));
+            List<GetProductImagesQRP> response = await _mediator.Send(getProductImagesQR);
+            return Ok(response);
         }
 
 
 
         [HttpDelete("[action]/{id}")] 
-        public async Task<ActionResult> DeleteProductImage(string id, string imageId)
+        public async Task<ActionResult> DeleteProductImage([FromRoute]RemoveProductImageCR removeProductImageCR, [FromQuery] string imageId)
         {
-
-
-           Product? product = await _productReadRepository.Table.Include(p => p.ProductImageFiles).FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
-
-           ProductImageFile? productImageFile = product.ProductImageFiles.FirstOrDefault(p => p.Id == Guid.Parse(imageId));
-           product.ProductImageFiles.Remove(productImageFile);
-            await _productImageFileWriteRepository.SaveAsync();
+           removeProductImageCR.ImageId =  imageId;
+           RemoveProductImageCRP response = await _mediator.Send(removeProductImageCR);
            return Ok();    
 
 
