@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using ETicaretAPI.Persistence.Contexts;
 using ETicaretAPI.Application.Repositories;
 using ETicaretAPI.Persistence.Repositories;
+using ETicaretAPI.Domain.Entities.Identity;
+using System.Collections;
+using Microsoft.Extensions.Configuration;
 
 namespace ETicaretAPI.Persistence
 {
@@ -16,7 +19,16 @@ namespace ETicaretAPI.Persistence
     {
         public static void AddPersistanceServices(this IServiceCollection services)
         {
-            services.AddDbContext<ETicaretAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString));
+            services.AddDbContext<ETicaretAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString)); // database connected path
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.Password.RequiredLength = 3;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+
+            }).AddEntityFrameworkStores<ETicaretAPIDbContext>(); //Identity Mekanizması
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
