@@ -7,7 +7,11 @@ using ETicaretAPI.Infrastructure.Services.Storage.Local;
 using ETicaretAPI.Persistence;
 using ETicaretAPI.Persistence.Contexts;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +37,24 @@ builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//JWT DOÐRULAMASI
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer("Admin", options =>
+    {
+        options.TokenValidationParameters = new()
+        {
+            ValidateAudience = true, // Oluþturulacak token deðerini  kimlerin/hangi originlerin/sitelerin kullanýcý belirlediðimizdeðerdir. --> www.bilmemne.com
+            ValidateIssuer = true, //Oluþturulacak token deðerini kimin daðýttýðýný ifade edeceðimiz alandýr. --> www.myapi.com
+            ValidateLifetime = true, //Oluþturulacak token deðerinin süresini kontrol edecek olan doðrulamadýr.
+            ValidateIssuerSigningKey = true,  //Üretilecek token deðerinin uygulamamýza ait bir deðer olduðunu ifade eden security key verisinin doðrulanmasýdýr.
+
+            ValidAudience = builder.Configuration["Token:Audience"],
+            ValidIssuer = builder.Configuration["Token:Issuer"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"]))
+        };
+    });
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -48,6 +70,7 @@ app.UseCors();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication(); // brysel eklendi
 app.UseAuthorization();
 
 app.MapControllers();

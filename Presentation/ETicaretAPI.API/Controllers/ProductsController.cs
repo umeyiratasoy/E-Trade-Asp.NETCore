@@ -20,11 +20,13 @@ using ETicaretAPI.Application.Features.Commands.Product.RemoveProduct;
 using ETicaretAPI.Application.Features.Commands.ProductImageFile.UploadProductImage;
 using ETicaretAPI.Application.Features.Commands.ProductImageFile.RemoveProductImage;
 using ETicaretAPI.Application.Features.Queries.ProductImageFile.GetProductImages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ETicaretAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes ="Admin")]
     public class ProductsController : ControllerBase
     {
         readonly private IProductWriteRepository _productWriteRepository;
