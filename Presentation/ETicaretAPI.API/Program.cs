@@ -19,6 +19,7 @@ using Serilog.Sinks.PostgreSQL;
 using Serilog.Context;
 using ETicaretAPI.API.Configurations.ColumnWriters;
 using Microsoft.AspNetCore.HttpLogging;
+using ETicaretAPI.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,7 +56,6 @@ Logger log = new LoggerConfiguration()
 
 builder.Host.UseSerilog(log); //serilog
 builder.Services.AddHttpLogging(logging =>//serilog
-
 {
     logging.LoggingFields = HttpLoggingFields.All;
     logging.RequestHeaders.Add("sec-ch-ua"); //kullancýya dair bütün bilgileri getirir
@@ -105,6 +105,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 
 app.UseStaticFiles();//angular
 app.UseSerilogRequestLogging();//serilog //bundan sonraki bilgiler loglanacak üstteki loglanmayacak
