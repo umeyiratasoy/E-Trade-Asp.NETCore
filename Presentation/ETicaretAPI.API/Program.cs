@@ -1,4 +1,4 @@
-using ETicaretAPI.Application;
+ï»¿using ETicaretAPI.Application;
 using ETicaretAPI.Application.Validators.Product;
 using ETicaretAPI.Infrastructure;
 using ETicaretAPI.Infrastructure.Filters;
@@ -20,6 +20,7 @@ using Serilog.Context;
 using ETicaretAPI.API.Configurations.ColumnWriters;
 using Microsoft.AspNetCore.HttpLogging;
 using ETicaretAPI.API.Extensions;
+using ETicaretAPI.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,13 +29,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistanceServices();
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices(); // media
-
+builder.Services.AddSignalRServices(); //SignalR
 
 //builder.Services.AddStorage<LocalStorage>();
 builder.Services.AddStorage<AzureStorage>();
-builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
+builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
 
-//serilog yapýlandýrmasý
+//serilog yapÄ±landÄ±rmasÄ±
 Logger log = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log.txt")
@@ -58,13 +59,13 @@ builder.Host.UseSerilog(log); //serilog
 builder.Services.AddHttpLogging(logging =>//serilog
 {
     logging.LoggingFields = HttpLoggingFields.All;
-    logging.RequestHeaders.Add("sec-ch-ua"); //kullancýya dair bütün bilgileri getirir
+    logging.RequestHeaders.Add("sec-ch-ua"); //kullancÄ±ya dair bÃ¼tÃ¼n bilgileri getirir
     logging.MediaTypeOptions.AddText("application/javascript");
     logging.RequestBodyLogLimit = 4096;
     logging.ResponseBodyLogLimit = 4096;
 });
 
-//fluentvalidation kullanýmýnýn saðlanmasý
+//fluentvalidation kullanÄ±mÄ±nÄ±n saÄŸlanmasÄ±
 builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
     .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<CreateProductValidator>())
     .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
@@ -74,23 +75,23 @@ builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//JWT DOÐRULAMASI
+//JWT DOÄžRULAMASI
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer("Admin", options =>
     {
         options.TokenValidationParameters = new()
         {
-            ValidateAudience = true, // Oluþturulacak token deðerini  kimlerin/hangi originlerin/sitelerin kullanýcý belirlediðimizdeðerdir. --> www.bilmemne.com
-            ValidateIssuer = true, //Oluþturulacak token deðerini kimin daðýttýðýný ifade edeceðimiz alandýr. --> www.myapi.com
-            ValidateLifetime = true, //Oluþturulacak token deðerinin süresini kontrol edecek olan doðrulamadýr.
-            ValidateIssuerSigningKey = true,  //Üretilecek token deðerinin uygulamamýza ait bir deðer olduðunu ifade eden security key verisinin doðrulanmasýdýr.
+            ValidateAudience = true, // OluÅŸturulacak token deÄŸerini  kimlerin/hangi originlerin/sitelerin kullanÄ±cÄ± belirlediÄŸimizdeÄŸerdir. --> www.bilmemne.com
+            ValidateIssuer = true, //OluÅŸturulacak token deÄŸerini kimin daÄŸÄ±ttÄ±ÄŸÄ±nÄ± ifade edeceÄŸimiz alandÄ±r. --> www.myapi.com
+            ValidateLifetime = true, //OluÅŸturulacak token deÄŸerinin sÃ¼resini kontrol edecek olan doÄŸrulamadÄ±r.
+            ValidateIssuerSigningKey = true,  //Ãœretilecek token deÄŸerinin uygulamamÄ±za ait bir deÄŸer olduÄŸunu ifade eden security key verisinin doÄŸrulanmasÄ±dÄ±r.
 
             ValidAudience = builder.Configuration["Token:Audience"],
             ValidIssuer = builder.Configuration["Token:Issuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
-            LifetimeValidator = ( notBefore,  expires,  securityToken,  validationParameters) => expires !=null ? expires > DateTime.UtcNow : false, // tokeinin süresi bittiði andatoken kapanacak
+            LifetimeValidator = ( notBefore,  expires,  securityToken,  validationParameters) => expires !=null ? expires > DateTime.UtcNow : false, // tokeinin sÃ¼resi bittiÄŸi andatoken kapanacak
             
-            NameClaimType = ClaimTypes.Name //JWT Üzerinden Nameclaime karþýlýk gelen deðeri user.identiy.name proptan elde edebiliriz
+            NameClaimType = ClaimTypes.Name //JWT Ãœzerinden Nameclaime karÅŸÄ±lÄ±k gelen deÄŸeri user.identiy.name proptan elde edebiliriz
         
         };
     });
@@ -108,15 +109,15 @@ if (app.Environment.IsDevelopment())
 app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 
 app.UseStaticFiles();//angular
-app.UseSerilogRequestLogging();//serilog //bundan sonraki bilgiler loglanacak üstteki loglanmayacak
+app.UseSerilogRequestLogging();//serilog //bundan sonraki bilgiler loglanacak Ã¼stteki loglanmayacak
 app.UseHttpLogging(); //serilog
 app.UseCors(); //angular
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication(); // brysel eklendi Authentication için
+app.UseAuthentication(); // brysel eklendi Authentication iÃ§in
 app.UseAuthorization();
-app.Use(async (context, next) =>  //serilog ayarlamasý
+app.Use(async (context, next) =>  //serilog ayarlamasÄ±
 {
 
     var username = context.User?.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
@@ -125,5 +126,6 @@ app.Use(async (context, next) =>  //serilog ayarlamasý
 });
 
 app.MapControllers();
+app.MapHubs();
 
 app.Run();

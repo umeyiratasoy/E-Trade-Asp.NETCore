@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3DLy7WihT8FZfouVqo//8IvqBQWomvpD6YxrEZm6Hm/d6YHNbcIdfATGDxX5WyQ7JKE0rApb+FRgArx9DEtVVQ==",
+  "dgSpecHash": "woBPFCUXdy0bNoWmAmXGyhWBQaZBBE8cZeEwkhGGTE5QImtyn+4wCSApLb9u2mVyR7R+tZUU1OWEPHh3ExL1Jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umeyi\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v4en6vcO2zWwE49vaDlhe5NWQUZbSNLULC6rXBg1tLc2mrE3HTgGsbwzK4fzziff5ZJDLWMYmBLQiNb7oBNc1Q==",
+  "dgSpecHash": "I6tmJF6njIMgZOEjMzLHEbf+5yAwuNhXXvOd8xMbYErIo8ZIlsbm5WB5c9NpwbtvasUQCmSVQtbTp+E9xSMm/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umeyi\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",

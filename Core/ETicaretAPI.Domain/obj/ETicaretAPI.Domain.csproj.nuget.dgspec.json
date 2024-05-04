@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {}
+    "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
+    "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
         "projectName": "ETicaretAPI.Domain",
-        "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\umeyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

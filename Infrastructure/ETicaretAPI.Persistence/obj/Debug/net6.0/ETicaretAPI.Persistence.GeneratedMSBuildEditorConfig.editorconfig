@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ETicaretAPI.Persistence
-build_property.ProjectDir = C:\Users\umeyi\OneDrive\Masaüstü\Asp.NET Core 6 + Angular ile Mini E-Ticaret\Asp.NET Core 6 + Angular ile Mini E-Ticaret\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\
+build_property.ProjectDir = C:\Users\umeyi\OneDrive\Masaüstü\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

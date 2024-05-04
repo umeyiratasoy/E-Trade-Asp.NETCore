@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MTNanb6z6HIqtFS3ojPlfw83fZYIao/yPzWVIv2oE5nHDCbeqJeI9sP9Cny9wMeKlds0uP4Bk04/WOUMZ1RuBw==",
+  "dgSpecHash": "6yq/n//9yHYSNx6kOuruiUUxreTyAHwdVn0S7ZfJVcrvGHOAJ9h99ikJP/h8IzO7OGirRS8OcUHlaT6jodlFyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umeyi\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\azure.storage.blobs\\12.12.0\\azure.storage.blobs.12.12.0.nupkg.sha512",

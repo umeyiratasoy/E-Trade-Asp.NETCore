@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2hb6/V+XjgtjaCddn9VaNlO2Eu8UZ9NqK+WvG1O6ZxY=",
+  "Hash": "xMBueLIyy4an7YblcVQ2RHTX4AMqHVChGAFgSkPxSkM=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ETicaretAPI.API\\wwwroot",
       "Source": "ETicaretAPI.API",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.jpg",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/download20240325200755-.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\download20240325200755-.jpg"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.png",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.png",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/download20240325200755-.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\download20240325200755-.png"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis20240325200755-.jpg",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis20240325200755-.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/netlestirilmis20240325200755-.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\netlestirilmis20240325200755-.jpg"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis220240325200755-.jpg",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis220240325200755-.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/netlestirilmis220240325200755-.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\netlestirilmis220240325200755-.jpg"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\umeyiir20240421101306-.jpg",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\umeyiir20240421101306-.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/umeyiir20240421101306-.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\umeyiir20240421101306-.jpg"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240322102524-.png",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240322102524-.png",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/xx20240322102524-.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\xx20240322102524-.png"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240421101317-.png",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240421101317-.png",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/xx20240421101317-.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\xx20240421101317-.png"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\uguryavuz-20240322133112.jpg",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\uguryavuz-20240322133112.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "resource/files/uguryavuz-20240322133112.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\resource\\files\\uguryavuz-20240322133112.jpg"
     },
     {
-      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\Ümeyiİr.jpg",
+      "Identity": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\Ümeyiİr.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\Asp.NET Core 6 + Angular ile Mini E-Ticaret\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "resource/files/Ümeyiİr.jpg",
       "AssetKind": "All",
