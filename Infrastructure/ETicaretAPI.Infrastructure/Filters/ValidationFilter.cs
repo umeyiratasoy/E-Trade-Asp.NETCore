@@ -10,6 +10,7 @@ namespace ETicaretAPI.Infrastructure.Filters
 {
     public class ValidationFilter : IAsyncActionFilter
     {
+
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             if (!context.ModelState.IsValid)

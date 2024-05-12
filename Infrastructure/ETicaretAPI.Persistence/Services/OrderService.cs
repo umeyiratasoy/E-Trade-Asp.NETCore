@@ -24,8 +24,18 @@ namespace ETicaretAPI.Persistence.Services
 
         public async Task CreateOrderAsync(CreateOrder createOrder)
         {
-            var orderCode = (new Random().NextDouble() * 10000).ToString();
-            orderCode = orderCode.Substring(orderCode.IndexOf(".") + 1, orderCode.Length - orderCode.IndexOf(".") - 1);
+
+            List<string> existingOrderCodes = _orderReadRepository.Table.Select(p => p.OrderCode).ToList();
+            string orderCode;
+            do
+            {
+                int number1, number2, number3;
+                Random random = new Random();
+                number1 = random.Next(100, 1000);
+                number2 = random.Next(100, 1000);
+                number3 = random.Next(100, 1000);
+                orderCode = $"{number1} {number2} {number3}";
+            } while (existingOrderCodes.Contains(orderCode));
 
             await _orderWriteRepository.AddAsync(new()
             {
@@ -53,11 +63,36 @@ namespace ETicaretAPI.Persistence.Services
                 TotalOrderCount = await query.CountAsync(),
                 Orders = await data.Select(o => new
                 {
+                    Id =o.Id,
                     CreatedDate = o.CreatedDate,
                     OrderCode = o.OrderCode,
                     TotalPrice = o.Basket.BasketItems.Sum(bi => bi.Product.Price * bi.Quantity),
                     UserName = o.Basket.User.UserName
                 }).ToListAsync()
+            };
+        }
+
+        public async Task<SingleOrder> GetOrderByIdAsync(string id)
+        {
+            var data = await _orderReadRepository.Table
+                                 .Include(o => o.Basket)
+                                     .ThenInclude(b => b.BasketItems)
+                                         .ThenInclude(bi => bi.Product)
+                                                 .FirstOrDefaultAsync(o => o.Id == Guid.Parse(id));
+
+            return new()
+            {
+                Id = data.Id.ToString(),
+                BasketItems = data.Basket.BasketItems.Select(bi => new
+                {
+                    bi.Product.Name,
+                    bi.Product.Price,
+                    bi.Quantity
+                }),
+                Address = data.Address,
+                CreatedDate = data.CreatedDate,
+                Description = data.Description,
+                OrderCode = data.OrderCode
             };
         }
     }
