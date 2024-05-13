@@ -18,6 +18,7 @@ using ETicaretAPI.Domain.Entities.Identity;
 using ETicaretAPI.Application.Exceptions;
 using ETicaretAPI.Application.Features.Commands.AppUser.LoginUser;
 using Microsoft.EntityFrameworkCore;
+using ETicaretAPI.Application.Helpers;
 
 namespace ETicaretAPI.Persistence.Services
 {
@@ -28,10 +29,12 @@ namespace ETicaretAPI.Persistence.Services
         readonly UserManager<AP.AppUser> _userManager;
         readonly ITokenHandler _tokenHandler;
         readonly SignInManager<AP.AppUser> _signInManager;
+
         readonly IUserService _userService;
+        readonly IMailService _mailService;
 
 
-        public AuthService(IHttpClientFactory httpClientFactory, IConfiguration configuration, UserManager<AP.AppUser> userManager, ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, IUserService userService)
+        public AuthService(IHttpClientFactory httpClientFactory, IConfiguration configuration, UserManager<AP.AppUser> userManager, ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, IUserService userService, IMailService mailService)
         {
             _httpClient = httpClientFactory.CreateClient();
             _configuration = configuration;
@@ -39,6 +42,7 @@ namespace ETicaretAPI.Persistence.Services
             _tokenHandler = tokenHandler;
             _signInManager = signInManager;
             _userService = userService;
+            _mailService = mailService;
         }
 
         async Task<Token> CreateUserExternalAsync(AppUser user, string email,string name,UserLoginInfo info, int accessTokenLifeTime )
@@ -68,7 +72,7 @@ namespace ETicaretAPI.Persistence.Services
 
 
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime,user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 15);
                 return token;
 
             }
@@ -130,7 +134,7 @@ namespace ETicaretAPI.Persistence.Services
             if (result.Succeeded) //bşrlı
             {
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime,user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 15);
 
                 return token;
             }
@@ -144,12 +148,46 @@ namespace ETicaretAPI.Persistence.Services
             if (user != null)
             {
                 Token token = _tokenHandler.CreateAccessToken(15,user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 300);
+                await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 300);
                 return token;
             }
             else
                 throw new NotFoundUserException();
 
+        }
+
+
+        public async Task PasswordResetAsync(string email)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(email);
+            if (user != null)
+            {
+                string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                //byte[] tokenBytes = Encoding.UTF8.GetBytes(resetToken);
+                //resetToken = WebEncoders.Base64UrlEncode(tokenBytes);  //şifrelenmiş token 
+                resetToken = resetToken.UrlEncode();  //şifrelenmiş token 
+
+                await _mailService.SendPasswordResetMailAsync(email, user.Id, resetToken);
+            }
+            else
+            {
+                throw new EmailNotFoundException();
+            }
+        }
+
+        public async Task<bool> VerifyResetTokenAsync(string resetToken, string userId)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                //byte[] tokenBytes = WebEncoders.Base64UrlDecode(resetToken); //şifrelenen tokeni çözme
+                //resetToken = Encoding.UTF8.GetString(tokenBytes);
+                resetToken = resetToken.UrlDecode();
+
+                return await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", resetToken);
+            }
+            return false;
         }
     }
 }

@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using ETicaretAPI.Application.Abstractions.Services;
 using ETicaretAPI.Persistence.Services;
 using ETicaretAPI.Application.Abstractions.Services.Authentications;
+using Microsoft.AspNetCore.Identity;
 
 namespace ETicaretAPI.Persistence
 {
@@ -31,7 +32,9 @@ namespace ETicaretAPI.Persistence
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
 
-            }).AddEntityFrameworkStores<ETicaretAPIDbContext>(); //Identity Mekanizması
+            }).AddEntityFrameworkStores<ETicaretAPIDbContext>().AddDefaultTokenProviders(); ; //Identity Mekanizması ve resetTokeni üretiyor
+
+
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
