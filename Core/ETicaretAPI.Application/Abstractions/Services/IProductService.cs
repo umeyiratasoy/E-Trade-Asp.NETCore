@@ -13,5 +13,6 @@ namespace ETicaretAPI.Application.Abstractions.Services
     {
         Task CreateAsync(VM_Create_Product model);
         Task<byte[]> QrCodeToProductAsync(string productId);
+        Task StockUpdateToProductAsync(string productId, int stock);
     }
 }
