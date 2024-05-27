@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gLlZ7mgwThkG/e0+G8KDPyp8tKPGuK64Hg6FS3U5HAGD9xsR0VpdgMgonZEon+l+9r/Iel8D8YtjZoPc6AmWbg==",
+  "dgSpecHash": "OcST2ZaFewTj7GvKll6F9xfKuPuVvf+4gAcNz0Z1/+0P+x4W9f7MTUs3FLf4kXmeFBndWsqCyHC8wVJFoiWBqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -71,6 +71,7 @@
     "C:\\Users\\umeyi\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\umeyi\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

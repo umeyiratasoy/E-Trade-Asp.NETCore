@@ -12,5 +12,6 @@ namespace ETicaretAPI.Application.Abstractions.Services
     public interface IProductService
     {
         Task CreateAsync(VM_Create_Product model);
+        Task<byte[]> QrCodeToProductAsync(string productId);
     }
 }

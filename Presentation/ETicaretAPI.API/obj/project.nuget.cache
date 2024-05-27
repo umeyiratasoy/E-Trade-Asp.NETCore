@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6yq/n//9yHYSNx6kOuruiUUxreTyAHwdVn0S7ZfJVcrvGHOAJ9h99ikJP/h8IzO7OGirRS8OcUHlaT6jodlFyw==",
+  "dgSpecHash": "6jsSjIYslUEIs9p1hgVQrKOcxmS9KDdiVsWvl3Jzo3Zbm1RO88pRu7VNtR+VOIDgFOJiWn4Vjt/LcXywJaWNrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
   "expectedPackageFiles": [
@@ -86,6 +86,7 @@
     "C:\\Users\\umeyi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\npgsql\\6.0.2\\npgsql.6.0.2.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.2\\npgsql.entityframeworkcore.postgresql.6.0.2.nupkg.sha512",
+    "C:\\Users\\umeyi\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\serilog\\2.11.0\\serilog.2.11.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\serilog.aspnetcore\\6.0.1\\serilog.aspnetcore.6.0.1.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\serilog.extensions.hosting\\5.0.1\\serilog.extensions.hosting.5.0.1.nupkg.sha512",

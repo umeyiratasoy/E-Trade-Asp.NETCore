@@ -237,3 +237,4 @@ C:\Users\umeyi\OneDrive\Masaüstü\ETicaretAPI\Presentation\ETicaretAPI.API\obj\
 C:\Users\umeyi\OneDrive\Masaüstü\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net6.0\ref\ETicaretAPI.API.dll
 C:\Users\umeyi\OneDrive\Masaüstü\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.dll
 C:\Users\umeyi\OneDrive\Masaüstü\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.pdb
+C:\Users\umeyi\OneDrive\Masaüstü\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\QRCoder.dll
