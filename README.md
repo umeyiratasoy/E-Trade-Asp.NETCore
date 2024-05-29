@@ -54,6 +54,6 @@ Projenin frontend-angular kısmını aşağıdaki bağlantıya giderek inceleyeb
 
 YBS Bitirme Projesi için yapılmıştır sunum raporuna aşağıdaki bağlantıdan ulaşabilirsiniz.
 <br>
-<a href="x" target="_blank">Bağlantı </a>
+<a href="https://github.com/umeyiratasoy/E-Trade-Asp.NETCore/tree/main/Docs" target="_blank">Bağlantı </a>
 
 
