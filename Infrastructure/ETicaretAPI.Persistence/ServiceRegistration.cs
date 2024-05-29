@@ -34,7 +34,7 @@ namespace ETicaretAPI.Persistence
 
             }).AddEntityFrameworkStores<ETicaretAPIDbContext>().AddDefaultTokenProviders(); ; //Identity Mekanizması ve resetTokeni üretiyor
 
-
+            
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();

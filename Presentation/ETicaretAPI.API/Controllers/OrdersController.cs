@@ -47,6 +47,7 @@ namespace ETicaretAPI.API.Controllers
             return Ok(response);
         }
 
+
         [HttpGet("complete-order/{Id}")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Orders, ActionType = ActionType.Updating, Definition = "Complete Order")]
         public async Task<ActionResult> CompleteOrder([FromRoute] CompleteOrderCommandRequest completeOrderCommandRequest)
