@@ -35,9 +35,10 @@
    ```
 2. `ETicaretAPI.sln` dosyasını `Visual Studio` ile açın.
 3. `appsettings.json` dosyasındaki bağlantıları(sql,port,key...) ve bilgileri yerleştirin
-4. `Package Manager Console` de Default project `ETicaretAPI.Persistence` seçiniz
-4. `Package Manager Console` kullanarak veritabanını oluşturun. // update-database
-5.  Projeyi Ayağa kaldırın -- Start(F5)
+4. Sadece bir kullanıcıya tüm yetkileri vermek için lütfen `appsettings.json` içerisinden `AdminName` kısmına kullanıcının epostasını veya kullanıcı adını girin.
+5. `Package Manager Console` de Default project `ETicaretAPI.Persistence` seçiniz
+6. `Package Manager Console` kullanarak veritabanını oluşturun. // update-database
+7.  Projeyi Ayağa kaldırın -- Start(F5)
 
 
 
