@@ -1,40 +1,44 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.jpg",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.jpg",
       "PackagePath": "staticwebassets\\photo-images\\download20240325200755-.jpg"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.png",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\download20240325200755-.png",
       "PackagePath": "staticwebassets\\photo-images\\download20240325200755-.png"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis20240325200755-.jpg",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis20240325200755-.jpg",
       "PackagePath": "staticwebassets\\photo-images\\netlestirilmis20240325200755-.jpg"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis220240325200755-.jpg",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\netlestirilmis220240325200755-.jpg",
       "PackagePath": "staticwebassets\\photo-images\\netlestirilmis220240325200755-.jpg"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\umeyiir20240421101306-.jpg",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\umeyiir20240421101306-.jpg",
       "PackagePath": "staticwebassets\\photo-images\\umeyiir20240421101306-.jpg"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240322102524-.png",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240322102524-.png",
       "PackagePath": "staticwebassets\\photo-images\\xx20240322102524-.png"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240421101317-.png",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\photo-images\\xx20240421101317-.png",
       "PackagePath": "staticwebassets\\photo-images\\xx20240421101317-.png"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\uguryavuz-20240322133112.jpg",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\uguryavuz-20240322133112.jpg",
       "PackagePath": "staticwebassets\\resource\\files\\uguryavuz-20240322133112.jpg"
     },
     {
-      "Id": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\Ümeyiİr.jpg",
+      "Id": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\Ümeyiİr.jpg",
       "PackagePath": "staticwebassets\\resource\\files\\Ümeyiİr.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",

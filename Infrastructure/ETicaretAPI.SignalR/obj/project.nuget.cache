@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R+M3YW8x6ppErSktofCDwDJaUdUq4lJeufEKx4uOPoXo/JqpP9lUZUCnpcDQboTwTFdkE1pV6aWSW81PKwj9zA==",
+  "dgSpecHash": "EFYQv6SMLtM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj",
+  "projectFilePath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umeyi\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",

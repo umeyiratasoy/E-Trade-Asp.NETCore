@@ -65,6 +65,25 @@ namespace ETicaretAPI.Persistence.Contexts
                     _ => DateTime.UtcNow
                 };
             }
+            //if-else ile yapımı
+            //foreach (var data in datas)
+            //{
+            //    if (data.State == EntityState.Added)
+            //    {
+            //        data.Entity.CreatedDate = DateTime.UtcNow;
+            //    }
+            //    else if (data.State == EntityState.Modified)
+            //    {
+            //        data.Entity.UpdatedDate = DateTime.UtcNow;
+            //    }
+            //    else
+            //    {
+            //        // Bu durumda başka bir işlem yapmamız gerekmiyor.
+            //        // Eğer başka bir işlem yapılacaksa buraya ekleyebilirsin.
+            //        // Örneğin:
+            //        // var currentDate = DateTime.UtcNow;
+            //    }
+            //}
             return await base.SaveChangesAsync(cancellationToken);
         }
 

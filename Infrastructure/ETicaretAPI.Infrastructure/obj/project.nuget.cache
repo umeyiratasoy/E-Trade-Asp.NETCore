@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OcST2ZaFewTj7GvKll6F9xfKuPuVvf+4gAcNz0Z1/+0P+x4W9f7MTUs3FLf4kXmeFBndWsqCyHC8wVJFoiWBqA==",
+  "dgSpecHash": "BJYSQBisEU8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umeyi\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\azure.storage.blobs\\12.12.0\\azure.storage.blobs.12.12.0.nupkg.sha512",

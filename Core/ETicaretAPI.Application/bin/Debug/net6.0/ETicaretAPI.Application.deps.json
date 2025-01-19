@@ -427,7 +427,10 @@
           "Microsoft.EntityFrameworkCore": "6.0.2"
         },
         "runtime": {
-          "ETicaretAPI.Domain.dll": {}
+          "ETicaretAPI.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

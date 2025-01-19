@@ -1,5 +1,286 @@
 [
   {
+    "ContainingType": "ETicaretAPI.API.Controllers.ApplicationServicesController",
+    "Method": "GetAuthorizeDefinitionEndpoints",
+    "RelativePath": "api/ApplicationServices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "FacebookLogin",
+    "RelativePath": "api/Auth/facebook-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "facebookLoginCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.FacebookLogin.FacebookLoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/Auth/google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "googleLoginCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.GoogleLogin.GoogleLoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUserCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "PasswordReset",
+    "RelativePath": "api/Auth/password-reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passwordResetCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.PasswordReset.PasswordResetCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "RefreshTokenLogin",
+    "RelativePath": "api/Auth/RefreshTokenLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenLoginCommandRQ",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.RefreshTokenLogin.RefreshTokenLoginCommandRQ",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "VerifyResetToken",
+    "RelativePath": "api/Auth/verify-reset-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "verifyResetTokenCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.VerifyResetToken.VerifyResetTokenCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthorizationEndpointsController",
+    "Method": "AssignRoleEndpoint",
+    "RelativePath": "api/AuthorizationEndpoints",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignRoleEndpointCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthorizationEndpointsController",
+    "Method": "GetRolesToEndpoint",
+    "RelativePath": "api/AuthorizationEndpoints/GetRolesToEndpoint",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolesToEndpointQueryRequest",
+        "Type": "ETicaretAPI.Application.Features.Queries.AuthorizationEndpoint.GetRolesToEndpoints.GetRolesToEndpointQueryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.BasketsController",
+    "Method": "GetBasketItems",
+    "RelativePath": "api/Baskets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getBasketItemsQueryRequest",
+        "Type": "ETicaretAPI.Application.Features.Queries.Basket.GetBasketItems.GetBasketItemsQueryRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.BasketsController",
+    "Method": "AddItemToBasket",
+    "RelativePath": "api/Baskets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addItemToBasketCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Basket.AddItemToBasket.AddItemToBasketCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.BasketsController",
+    "Method": "UpdateQuantity",
+    "RelativePath": "api/Baskets",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateQuantityCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Basket.UpdateQuantity.UpdateQuantityCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.BasketsController",
+    "Method": "RemoveBasketItem",
+    "RelativePath": "api/Baskets/{BasketItemId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BasketItemId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.FilesController",
+    "Method": "GetBaseStorageUrl",
+    "RelativePath": "api/Files/GetBaseStorageUrl",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.OrdersController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.OrdersController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrderCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.OrdersController",
+    "Method": "GetOrderById",
+    "RelativePath": "api/Orders/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.OrdersController",
+    "Method": "CompleteOrder",
+    "RelativePath": "api/Orders/complete-order/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "Get",
     "RelativePath": "api/Products",
@@ -86,6 +367,27 @@
   },
   {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
+    "Method": "ChangeShowcaseImage",
+    "RelativePath": "api/Products/ChangeShowcaseImage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ImageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "DeleteProductImage",
     "RelativePath": "api/Products/DeleteProductImage/{id}",
     "HttpMethod": "DELETE",
@@ -128,6 +430,38 @@
   },
   {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
+    "Method": "UpdateStockQrCodeToProduct",
+    "RelativePath": "api/Products/qrcode",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateStockQrCodeToProductCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Product.UpdateStockQrCodeToProduct.UpdateStockQrCodeToProductCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
+    "Method": "GetQrCodeToProduct",
+    "RelativePath": "api/Products/qrcode/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "Upload",
     "RelativePath": "api/Products/Upload",
     "HttpMethod": "POST",
@@ -143,6 +477,181 @@
         "Name": "Files",
         "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.RolesController",
+    "Method": "GetRoles",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.RolesController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRoleCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.RolesController",
+    "Method": "GetRoles",
+    "RelativePath": "api/Roles/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.RolesController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Roles/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRoleCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Role.UpdateRole.UpdateRoleCommandRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.RolesController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Roles/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "AssignRoleToUser",
+    "RelativePath": "api/Users/assign-role-to-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignRoleToUserCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.AssignRoleToUser.AssignRoleToUserCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "GetRolesToUser",
+    "RelativePath": "api/Users/get-roles-to-user/{UserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/Users/update-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePasswordCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.UpdatePassword.UpdatePasswordCommandRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

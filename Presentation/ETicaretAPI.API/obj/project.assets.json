@@ -5801,19 +5801,21 @@
   },
   "packageFolders": {
     "C:\\Users\\umeyi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+      "projectUniqueName": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
       "projectName": "ETicaretAPI.API",
-      "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+      "projectPath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
       "packagesPath": "C:\\Users\\umeyi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\obj\\",
+      "outputPath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\umeyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5824,6 +5826,7 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -5831,17 +5834,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
+            "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
             },
-            "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj"
+            "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj"
             },
-            "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
-              "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj"
+            "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
+              "projectPath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj"
             },
-            "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
-              "projectPath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj"
+            "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
+              "projectPath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj"
             }
           }
         }
@@ -5855,7 +5858,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net6.0": {
@@ -5915,7 +5919,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

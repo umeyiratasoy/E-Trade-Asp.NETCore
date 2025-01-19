@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n4g41+l8PPi/IgmQOI8CpWFkaqrnIPQo9CyHCIpbRn7FUT5+1sIpBRrwf/X4rHnPJWPhnP4bUjpdkzIq8fzDCQ==",
+  "dgSpecHash": "PazTGuEpsBY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\umeyi\\OneDrive\\Masaüstü\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
+  "projectFilePath": "C:\\Users\\umeyi\\Desktop\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umeyi\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\umeyi\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",

@@ -425,7 +425,10 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         },
         "runtime": {
-          "ETicaretAPI.Application.dll": {}
+          "ETicaretAPI.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ETicaretAPI.Domain/1.0.0": {
@@ -435,7 +438,10 @@
           "Microsoft.EntityFrameworkCore": "6.0.2"
         },
         "runtime": {
-          "ETicaretAPI.Domain.dll": {}
+          "ETicaretAPI.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
